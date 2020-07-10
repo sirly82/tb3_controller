@@ -1,14 +1,14 @@
 /*
- * Author: Anis Koubaa
- * Year: 2016
- * Prince Sultan University/Gaitech Robotics.
+ * Author: Nuryono SW
+ * Year: 2020
+ * UAD
  *
  */
 
 
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
-//#include "turtlesim/Pose.h"
+
 #include <sstream>
 
 using namespace std;
@@ -17,10 +17,7 @@ ros::Publisher velocity_publisher;
 
 
 
-const double x_min = 0.0;
-const double y_min = 0.0;
-const double x_max = 11.0;
-const double y_max = 11.0;
+
 
 const double PI = 3.14159265359;
 
@@ -64,21 +61,7 @@ int main(int argc, char **argv)
 	//rotate(degrees2radians(angular_speed), degrees2radians(angle), clockwise);
 	move(speed, distance, isForward);
 	rotate(degrees2radians(angular_speed), degrees2radians(angle), clockwise);
-	move(speed, distance, isForward);
-	rotate(degrees2radians(angular_speed), degrees2radians(angle), clockwise);
-	move(speed, distance, isForward);
-	rotate(degrees2radians(angular_speed), degrees2radians(angle), clockwise);
-	move(speed, distance, isForward);
-	rotate(degrees2radians(angular_speed), degrees2radians(angle), clockwise);
-
-	//ros::Rate loop_rate(0.5);
 	
-	//loop.sleep();
-	//spiralClean();
-
-	//ros::spin();
-
-	//return 0;
 }
 
 /**
